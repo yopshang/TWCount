@@ -1,9 +1,7 @@
-import Index from './page/Index'
+import Index from './page/Index.jsx'
 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import 'element-theme-default';
+import { Layout } from 'element-react'
 import './style/main.scss'
 import './App.css'
 
@@ -12,7 +10,13 @@ function App() {
 
   return (
     <>
-      <Index></Index>
+      <Layout.Row>
+        <Layout.Col span="24">
+          <div className="grid-content bg-purple-dark">
+            <Index></Index>
+          </div>
+        </Layout.Col>
+      </Layout.Row>
     </>
   )
 }
