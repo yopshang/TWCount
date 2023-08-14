@@ -10,13 +10,9 @@ function App() {
 
   return (
     <>
-      <Layout.Row>
-        <Layout.Col span="24">
-          <div className="grid-content bg-purple-dark">
-            <Index></Index>
-          </div>
-        </Layout.Col>
-      </Layout.Row>
+      <div className="grid-content bg-purple-dark" style={{width:'100vw'}}>
+        <Index></Index>
+      </div>
     </>
   )
 }
