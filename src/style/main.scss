@@ -1,4 +1,8 @@
+@import './variable';
+@import './utility';
+@import './component';
 #root {
     padding: 0!important;
     height: 100vh;
+    margin: 0!important;
 }

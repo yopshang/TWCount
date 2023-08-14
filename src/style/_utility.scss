@@ -1,0 +1,52 @@
+.d-flex {
+    display: flex;
+    &.flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    &.flex-col {
+        flex-direction: column;
+    }
+    &.flex-col-reverse {
+        flex-direction: column-reverse;
+    }
+    &.justify {
+
+        &-center {
+            justify-content: center;
+        }
+        &-start {
+            justify-content: flex-start;
+        }
+        &-end {
+            justify-content: flex-end;
+        }
+        &-between {
+            justify-content: space-between;
+        }
+        &-around {
+            justify-content: space-around;
+        }
+    }
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+    &.flex-nowrap {
+        flex-wrap: nowrap;
+    }
+}
+
+.list {
+    &--no {
+        list-style: none;
+    }
+}
+
+@for $i from 1 through 10 {
+    .p-#{$i} {
+        padding: $i*4px;
+    }
+    .py-#{$i} {
+        padding-left: $i*4px;
+        padding-right: $i*4px
+    }
+}
