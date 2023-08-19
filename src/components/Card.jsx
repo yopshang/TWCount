@@ -1,5 +1,4 @@
 export default function Card({card, index}){
-    console.log('card', card,'index', index)
     return (<>
         <li key={index}  className="card">
             <h3>

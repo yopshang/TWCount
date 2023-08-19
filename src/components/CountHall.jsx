@@ -3,7 +3,7 @@ import Testpage1 from '../page/TestPage1'
 import Testpage2  from '../page/Testpage2'
 import Card from './Card'
 import {useState} from 'react';
-import {Outlet, Link, Route, Routes} from 'react-router-dom'
+import { Link, Route, Routes} from 'react-router-dom'
 
 export default function CountHall() {
     const [cards, setCards] = useState([
@@ -24,16 +24,21 @@ export default function CountHall() {
                 )
             })
         }
-        {/* <Routes>
-        {cards.map(card=>{
-            <Route
-                key={card.key}
-                path={card.path}
-                element={<PersonalSetWorth/>}
-                exact
-            ></Route>
-        })}
-      </Routes> */}
+        <Routes>
+            {
+                cards.map((card, index)=>{
+                    return (
+                        <Route
+                            key={index}
+                            path={card.path}
+                            element={card.component}
+                        >
+
+                        </Route>
+                    )
+                })
+            }
+        </Routes>
     </ul>
   </div>);
 };
